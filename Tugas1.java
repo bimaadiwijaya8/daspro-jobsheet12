@@ -1,17 +1,14 @@
 import java.util.Scanner;
 
 public class Tugas1 {
-    public static void DeretDescendingRekursif(int n) {
+    public static int DeretDescendingRekursif(int n) {
         if (n == 0) {
-            return;
+            return 0;
+        } else {
+            System.out.println(n + " ");
+            return DeretDescendingRekursif(n - 1);
         }
-        DeretDescendingIteratif(n - 1);
-    }
-
-    public static void DeretDescendingIteratif(int n) {
-        for (int i = n; i >= 0; i--) {
-            System.out.println(i);
-        }
+        
     }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -19,6 +16,6 @@ public class Tugas1 {
         System.out.println("Masukkan angka: ");
         int angka = input.nextInt();
 
-        DeretDescendingRekursif(angka);
+        System.out.println(DeretDescendingRekursif(angka));
     }
 }
